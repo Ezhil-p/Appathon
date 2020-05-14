@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/delete_dialog">
+    <TextView
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="20sp"
+        android:text="delete this item for sure?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:id="@+id/delete_label"/>
+
+    <TextView
+        android:layout_alignStart="@id/delete_label"
+        android:textColor="@android:color/holo_blue_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/delete_label"
+        android:fontFamily="casual"
+        android:text="no regrets later...." />
+    <Button
+        android:layout_marginBottom="20dp"
+        android:background="@android:color/holo_blue_light"
+        android:text="Ok"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/delete_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ok_button"/>
+    <Button
+        android:layout_marginLeft="10dp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_blue_light"
+        android:text="cancel"
+        android:layout_alignBottom="@id/ok_button"
+        android:layout_toRightOf="@id/ok_button"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cancel_button"/>
+</RelativeLayout>

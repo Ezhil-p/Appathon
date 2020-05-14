@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TaskCreation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/holo_blue_light"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            tools:context=".TaskCreation">
+
+            <TextView
+                android:id="@+id/to_do_task_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="casual"
+                android:text="toDoTasks"
+                android:textSize="40sp" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/task_name_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:fontFamily="@font/archivo_black"
+                android:text="Task Name:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/creating_alarm_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/progress_bar"
+                android:text="@string/creating_alarm"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/task_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/task_name_label"
+                android:layout_marginTop="10dp"
+                android:hint="Enter The Task Name" />
+
+            <TextView
+                android:id="@+id/task_time_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/task_name"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/archivo_black"
+                android:text="Task time:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/task_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/task_time_label"
+                android:layout_marginTop="10dp"
+                android:hint="Set Time"
+                android:padding="10dp"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/task_time"
+                android:layout_toRightOf="@id/task_time"
+                android:text="24hr" />
+
+            <ImageView
+                android:id="@+id/task_image_time"
+                android:layout_width="83dp"
+                android:layout_height="58dp"
+                android:layout_alignTop="@id/task_time"
+                android:layout_alignBottom="@id/task_time"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="-6dp"
+                android:layout_marginRight="183dp"
+                android:layout_marginBottom="-7dp"
+                android:layout_toRightOf="@id/task_time"
+                android:src="@drawable/ic_access_alarms_black_24dp" />
+
+            <TextView
+                android:id="@+id/task_likablity_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/task_time"
+                android:layout_marginTop="75dp"
+                android:fontFamily="@font/archivo_black"
+                android:text="Task Likablity:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/hate_likablity_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/task_likablity_label"
+                android:layout_marginTop="10dp"
+                android:text="@string/hate_likablity" />
+
+            <TextView
+                android:id="@+id/avg_likablity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/hate_likablity_label"
+                android:layout_marginLeft="50dp"
+                android:layout_toRightOf="@id/hate_likablity_label"
+                android:text="@string/avg_likablity" />
+
+            <TextView
+                android:id="@+id/high_likablity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/hate_likablity_label"
+                android:layout_marginLeft="80dp"
+                android:layout_toRightOf="@+id/avg_likablity"
+                android:text="@string/high_likablity" />
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/task_likablity"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hate_likablity_label"
+                android:layout_marginTop="5dp"
+                android:max="2"
+                android:theme="@style/Widget.AppCompat.SeekBar.Discrete" />
+
+            <TextView
+                android:id="@+id/task_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/task_likablity"
+                android:layout_marginTop="75dp"
+                android:text="@string/task_notify_msg" />
+
+            <Button
+                android:id="@+id/task_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/task_msg"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/holo_blue_light"
+                android:fontFamily="@font/archivo_black"
+                android:text="schedule task"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">ToDoTasksApp</string>
+    <string name="task_notify_msg">The toDoTasks are notified at the specified time everyday....by a positive quote</string>
+    <string name="hate_likablity">hate to do this</string>
+    <string name="avg_likablity">most likely</string>
+    <string name="high_likablity">highly likely</string>
+    <string name="notification_title">eveyDay toDo Task</string>
+    <string name="creating_alarm">creating_alarm</string>
+    <array name="heighStressQuotes">
+        <item>Don’t downgrade your dream just to fit your reality, upgrade your conviction to match
+            your destiny.
+        </item>
+        <item>You are braver than you believe, stronger than you seem and smarter than you think
+        </item>
+        <item>You attract what you are, not what you want. If you want great, then be great.</item>
+        <item>Always believe that something wonderful is about to happen.</item>
+        <item>Don’t talk, just act. Don’t say, just show. Don’t promise, just prove</item>
+        <item>Never stop doing great just because someone doesn’t give you credit.</item>
+        <item>Work while they sleep. Learn while they party. Save while they spend. Live like they
+            dream
+        </item>
+        <item>If it doesn’t challenge you, it won’t change you</item>
+    </array>
+</resources>
